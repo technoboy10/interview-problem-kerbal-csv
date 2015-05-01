@@ -67,7 +67,7 @@ columns after they've been read, and before they've been
 displayed.
 	* Occasionally you'll come across data in real life
 	that's been stored
-	as a function of it's 'true' value, in order to increase
+	as a function of its 'true' value, in order to increase
 	resolution in certain ranges. For example, RGB
 	values in images are often stored as `sqrt(R),sqrt(G),sqrt(B)`
 	to provide more granularity around smaller values. (Neat
