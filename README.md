@@ -67,15 +67,15 @@ displayed.
 	to provide more granularity around smaller values. (Neat
 	trivia, this is because the human perception of color is
 	non-linear; we can detect very small differences in
-	shades of dark gray, but we have a harder time with brighter
+	shades of dark gray, but we have less granularity with brighter
 	colors)
 	* In this case, the 'true' values are percents between 0
 	and 100. In an attempt to spread them around between
 	-&infin; and &infin; I've first applied a linear transform
-	to move the values between -&pi;/2 and &pi;/2 and then
+	to move the values between -PI/2 and PI/2 and then
 	applied the `tan` function. The full formula is:
 
 	```
-	tan(true_val * &pi; / 100.0 - (&pi;/2))
+	tan(true_val * PI / 100.0 - (PI;/2))
 	```
 
