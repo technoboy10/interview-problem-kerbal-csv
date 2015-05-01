@@ -77,6 +77,6 @@ displayed.
 	applied the `tan` function. The full formula is:
 
 	```
-	tan(true_val * PI / 100.0 - (PI;/2))
+	tan(true_val * PI / 100.0 - (PI/2))
 	```
 
