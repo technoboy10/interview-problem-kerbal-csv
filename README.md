@@ -13,9 +13,10 @@ want to "wow" us.
 
 You may use whatever language you're most comfortable with. At
 LASP we mostly use Scala and Javascript (on our team, anyway),
-so if you're familiar with them I'd consider giving them a whirl,
-but it's more important to have clean, idiomatic, working code
-than it is to use any particular language.
+so if you're familiar with either you should consider using
+one, but it's more important to us that you can
+write clean, idiomatic, and working code in *a* language
+than it is that you already know *our* languages.
 
 To submit a solution to this problem, pretty much any method is
 OK. If you're comfortable with git and github, we encourage
