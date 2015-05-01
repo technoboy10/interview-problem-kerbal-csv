@@ -29,8 +29,9 @@ emailing us a zip of your code is fine, too.
 	* The text values are quoted, but otherwise there's nothing
 	'tricky' about the csv. There are no quotes or commas in
 	any of the strings. Parsing the file by splitting on
-	'\n' and ',' is just fine - we're not testing your ability
-	to look up a really great csv library.
+	'\n' and ',' is just fine - we're trying to keep this under
+	2 hours, and we're more interested in your code than
+	your ability to find a good csv library.
 	* The first line is a header; it contains the names of the
 	fields/columns. The rest of the lines are data.
 2. Required - Print the data as JSON; an array of objects.
