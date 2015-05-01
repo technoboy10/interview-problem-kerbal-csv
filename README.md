@@ -72,7 +72,7 @@ displayed.
 	* In this case, the 'true' values are percents between 0
 	and 100. In an attempt to spread them around between
 	-&infin; and &infin; I've first applied a linear transform
-	to move the values between `-&pi;/2` and `&pi;/2` and then
+	to move the values between -&pi;/2 and &pi;/2 and then
 	applied the `tan` function. The full formula is:
 
 	```
