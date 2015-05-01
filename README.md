@@ -35,7 +35,11 @@ emailing us a zip of your code is fine, too.
 	* The first line is a header; it contains the names of the
 	fields/columns. The rest of the lines are data.
 2. Required - Print the data as JSON; an array of objects.
-	* Code should be easy to run from the command line. You've
+	* Your project should be easy to run from the command line.
+	You must provide us with instructions about how we should
+	run your code. You can assume we'll be on a 'unix-y'
+	system (we have access to Windows machines, but our personal
+	work computers are generally OSX or Linux). You've
 	got a little flexibility here depending on your language
 	and build system of choice, but here are some rough
 	guidelines:
@@ -43,11 +47,12 @@ emailing us a zip of your code is fine, too.
 		* OK - `maven package; cd target/dist; java -jar main.jar`
 		* OK - `./gradlew -q run`
 		* OK - `python main.py`
-		* Not OK - More than a few lines of human-executed terminal
-		code
-		* OK - Putting those lines into a shell script so that
-		the human only has to run `./my_build_script.sh`
-		* Not OK - "To run, click the 'Run' button in Eclipse/IntelliJ/Visual Studio"
+		* Not OK - Making me type more than a few commands
+		at the command prompt
+		* OK - Putting those commands into a shell script so that
+		I can just run `./my_build_script.sh` or something
+		* Not OK - "To run, click the 'Run' button in
+		Eclipse/IntelliJ/Visual Studio"
 			* Not that we don't like IDEs, but you shouldn't
 			assume that we use the same one you do.
 3. Optional - Add an option to print the data as XML
@@ -70,11 +75,14 @@ displayed.
 	non-linear; we can detect very small differences in
 	shades of dark gray, but we have less granularity with brighter
 	colors)
-	* In this case, the 'true' values are percents between 0
+	* In this case, the 'true' values for courage and stupidity
+	are percents between 0
 	and 100. In an attempt to spread them around between
 	-&infin; and &infin; I've first applied a linear transform
 	to move the values between -PI/2 and PI/2 and then
-	applied the `tan` function. The full formula is:
+	applied the `tan` function (yes, this is a fairly meaningless
+	transform - it's just an exercise, don't worry about it too
+	much). The full formula is:
 
 	```
 	tan(true_val * PI / 100.0 - (PI/2))
