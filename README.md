@@ -59,8 +59,23 @@ emailing us a zip of your code is fine, too.
 4. Optional - Apply a transform to the 'Courage' and 'Stupidity'
 columns after they've been read, and before they've been
 displayed.
-	* The values in the csv file are a function of their 'true'
-	values. This is done occasionally in real life to provide
-	higher resolution in certain ranges. For example, RGB
+	* Occasionally you'll come across data in real life
+	that's been stored
+	as a function of it's 'true' value, in order to increase
+	resolution in certain ranges. For example, RGB
 	values in images are often stored as `sqrt(R),sqrt(G),sqrt(B)`
-	to provide more granularity around smaller values.
+	to provide more granularity around smaller values. (Neat
+	trivia, this is because the human perception of color is
+	non-linear; we can detect very small differences in
+	shades of dark gray, but we have a harder time with brighter
+	colors)
+	* In this case, the 'true' values are percents between 0
+	and 100. In an attempt to spread them around between
+	-&infin; and &infin; I've first applied a linear transform
+	to move the values between `-&pi;/2` and `&pi;/2` and then
+	applied the `tan` function. The full formula is:
+
+	```
+	tan(true_val * &pi; / 100.0 - (&pi;/2))
+	```
+
