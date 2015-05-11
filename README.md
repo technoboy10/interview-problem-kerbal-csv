@@ -1,7 +1,7 @@
 # Interview Problem: Kerbal CSV
 
 This is a short interview problem that involves parsing some
-[Kerbal Space Program-themed](https://kerbalspaceprogram.com/en/)
+[Kerbal Space Program](https://kerbalspaceprogram.com/en/)-themed
 csv. It is intended to take about 1-2 hours.
 
 The problem has a few required parts and few optional "extra-credit"
@@ -35,6 +35,16 @@ emailing us a zip of your code is fine, too.
 	* The first line is a header; it contains the names of the
 	fields/columns. The rest of the lines are data.
 2. Required - Print the data as JSON; an array of objects.
+	* This is the JSON validator I will be using:
+
+	[jsonlint](https://github.com/zaach/jsonlint)
+
+	For example, I will execute your program by running:
+
+	```
+	./yourProgram | jsonlint
+	```
+	
 	* Your project should be easy to run from the command line.
 	You must provide us with instructions about how we should
 	run your code. You can assume we'll be on a 'unix-y'
