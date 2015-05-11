@@ -35,36 +35,44 @@ emailing us a zip of your code is fine, too.
 	* The first line is a header; it contains the names of the
 	fields/columns. The rest of the lines are data.
 2. Required - Print the data as JSON; an array of objects.
+	* The entire output of your program should be one JSON
+	array. Each object in the array should represent one
+	Kerbal (CSV line). The fields of the object should be
+	the column headers. I'm not picky about indentation,
+	whitespace, or capitalization though.
 	* This is the JSON validator I will be using:
-
 	[jsonlint](https://github.com/zaach/jsonlint)
 
-	For example, I will execute your program by running:
+	For example, I will execute your program by piping
+	its output to jsonlint, something like this:
 
 	```
 	./yourProgram | jsonlint
 	```
-	
-	* Your project should be easy to run from the command line.
-	You must provide us with instructions about how we should
-	run your code. You can assume we'll be on a 'unix-y'
-	system (we have access to Windows machines, but our personal
-	work computers are generally OSX or Linux). You've
-	got a little flexibility here depending on your language
-	and build system of choice, but here are some rough
-	guidelines:
+
+	* You must provide clear instructions to build and run
+	your code. I must be able to compile your code locally
+	from the command line; don't just send me an executable.
+	You can assume we'll be on a 'unix-y' system (our
+	personal workstations are mostly OSX, and our servers
+	are mostly RedHat).
+	We're pretty flexible about the details here, as it
+	will depend a lot on your language and build system of
+	choice, but here are some rough guidelines:
 		* OK - `make; ./main`
 		* OK - `maven package; cd target/dist; java -jar main.jar`
 		* OK - `./gradlew -q run`
 		* OK - `python main.py`
-		* Not OK - Making me type more than a few commands
+		* Not OK - Making me type more than a few (3-ish) commands
 		at the command prompt
 		* OK - Putting those commands into a shell script so that
 		I can just run `./my_build_script.sh` or something
-		* Not OK - "To run, click the 'Run' button in
-		Eclipse/IntelliJ/Visual Studio"
-			* Not that we don't like IDEs, but you shouldn't
-			assume that we use the same one you do.
+		* Not OK - build/run instructions that involve
+		Eclipse/Visual Studio/IntelliJ/etc
+			* Not that we don't like IDEs (we use them every day),
+			but you shouldn't assume that we use the same one you do,
+			and they don't make for a very portable/scalable/automatable
+			build system
 3. Optional - Add an option to print the data as XML
 	* You should be able to pass a parameter to the program via
 	the command line. Again the format is flexible, but we're
@@ -81,8 +89,8 @@ displayed.
 	resolution in certain ranges. For example, RGB
 	values in images are often stored as `sqrt(R),sqrt(G),sqrt(B)`
 	to provide more granularity around smaller values. (Neat
-	trivia, this is because the human perception of color is
-	non-linear; we can detect very small differences in
+	trivia: this is because the human perception of color is
+	nonlinear - we can detect very small differences in
 	shades of dark gray, but we have less granularity with brighter
 	colors)
 	* In this case, the 'true' values for courage and stupidity
