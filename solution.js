@@ -24,16 +24,20 @@ fs.readFile('kerbals.csv', 'utf8', function (err, data) {
     for (let row = 1; row < rows.length - 1; row++) { // Last item in rows is a blank string
         let parsed = rows[row].split(',');
         let currentKerbal = {};
+
         for (let col = 0; col < parsed.length; col++) { // Last item in parsed is a blank string
             // Tips from https://stackoverflow.com/questions/24932345/removing-all-instances-of-a-character-from-a-string
+            let strippedValue = parsed[col].replace(/"/g, ''); // Remove double quotes from the parsed data
+            let strippedHeader = headers[col].replace(/"/g, '')]; // Remove double quotes from the header
+
             if (col == 6 || col == 7) {
                 // If we're parsing Courage or Stupidity, unTransform the value before adding it to the object
-                currentKerbal[headers[col].replace(/"/g, '')] = unTransform(Number(parsed[col].replace(/"/g, ''))).toString();
+                currentKerbal[strippedHeader] = unTransform(Number(strippedValue)).toString();
             } else {
-                currentKerbal[headers[col].replace(/"/g, '')] = parsed[col].replace(/"/g, '');
+                currentKerbal[strippedHeader] = strippedValue; // Otherwise, just use the string
             }
         }
-        result.push(currentKerbal);
+        result.push(currentKerbal); // Add the kerbal to our final array
     }
-    console.log(JSON.stringify(result));
+    console.log(JSON.stringify(result)); // Output the stringified array
 });
