@@ -32,7 +32,7 @@ fs.readFile('kerbals.csv', 'utf8', function (err, data) {
         for (let col = 0; col < parsed.length; col++) { // Last item in parsed is a blank string
             // Tips from https://stackoverflow.com/questions/24932345/removing-all-instances-of-a-character-from-a-string
             let strippedValue = parsed[col].replace(/"/g, ''); // Remove double quotes from the parsed data
-            let strippedHeader = headers[col].replace(/"/g, '')]; // Remove double quotes from the header
+            let strippedHeader = headers[col].replace(/"/g, ''); // Remove double quotes from the header
 
             if (col == 6 || col == 7) {
                 // If we're parsing Courage or Stupidity, unTransform the value before adding it to the object
