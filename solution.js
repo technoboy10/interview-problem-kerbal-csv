@@ -1,4 +1,8 @@
-// This solution uses NodeJS 6.x
+/*
+ * This solution was developed with NodeJS 6.x
+ * Run it using $ node solution.js (assumes that the kerbals.csv file is in the same directory)
+ */
+
 const fs = require('fs');
 
 const unTransform = function (x) {
